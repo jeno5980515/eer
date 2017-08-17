@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Table from '../components/Table';
 
 let Data = ({ nodes, links }) => (
-	<div>
+	<div className='data'>
 		{ nodes.map( (node, index) => <Table node={node} key={index} />) }
 	</div>
 )

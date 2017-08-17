@@ -1,9 +1,22 @@
 import React from 'react';
+import '../App.css';
+
+const Title = ({ id }) => (
+	<div className='title'>
+		{ id }
+	</div>
+)
+
+const Field = ({ name }) => (
+	<div className='field'>
+		{ name }
+	</div>
+)
 
 const Table = ({ node }) => (
-	<div>
-		<div>{node.id}</div>
-		{ node.fields.map((field, index) => <div key={index}>{field.name}</div> )}
+	<div className='table'>
+		<Title id={node.id} />
+		{ node.fields.map((field, index) => <Field key={index} name={field.name}></Field> )}
 	</div>
 )
 
