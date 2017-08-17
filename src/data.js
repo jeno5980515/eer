@@ -24,16 +24,16 @@ const Nodes = [
 ]
 
 const Links = [
-	{
-		n1 : {
+	[
+		{
 			table : 'table1',
 			field : 'col1'
 		},
-		n2 : {
+		{
 			table : 'table2',
 			field : 'col2'
 		}
-	}
+	]
 ]
 
 export default {

@@ -8,9 +8,6 @@ import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducers);
 
-store.subscribe(() => {
-  console.log(store.getState());
-})
 
 render(
   <Provider store={store}>
