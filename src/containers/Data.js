@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Table from '../components/Table';
+import Table from './Table';
 import Link from '../components/Link';
 
-let Data = ({ nodes, links, positions }) => {
+let Data = ({ nodes, links, positions, tableInfo }) => {
 	return (
 		<div className='data'>
 			{ nodes.map( (node, index) => <Table node={node} key={index} index={index} />) }
@@ -19,7 +19,7 @@ let Data = ({ nodes, links, positions }) => {
 				if ( p1 && p2 ){
 					let linkData = [p1, p2];
 					return (
-						<Link linkData={linkData} key={index}/> 
+						<Link tableInfo={tableInfo} linkData={linkData} key={index}/> 
 					)
 				}
 				else {
@@ -34,7 +34,8 @@ const mapStateToProps = (state) => {
 	return {
 		nodes : state.data.nodes,
 		links : state.data.links,
-		positions : state.positions
+		positions : state.positions,
+		tableInfo : state.info.table
 	}
 }
 
