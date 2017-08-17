@@ -36,7 +36,7 @@ const Links = [
 	}
 ]
 
-export {
-	Nodes,
-	Links
+export default {
+	nodes : Nodes,
+	links : Links
 }
