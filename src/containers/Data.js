@@ -6,7 +6,7 @@ import Link from '../components/Link';
 let Data = ({ nodes, links, positions }) => {
 	return (
 		<div className='data'>
-			{ nodes.map( (node, index) => <Table node={node} key={index} />) }
+			{ nodes.map( (node, index) => <Table node={node} key={index} index={index} />) }
 			{ links.map( (link, index) => {
 				const t1 = link[0].table,
 					t2 = link[1].table,
@@ -15,7 +15,7 @@ let Data = ({ nodes, links, positions }) => {
 
 				const p1 = positions && positions[t1] && positions[t1][f1],
 					p2 = positions && positions[t2] && positions[t2][f2];
-					
+
 				if ( p1 && p2 ){
 					let linkData = [p1, p2];
 					return (

@@ -24,13 +24,14 @@
 }
 
 .data {
-  display: flex;
 }
 
 .table{
   margin: 10px;
   text-align: center;
-  flex : 1;
+  position : absolute;
+  display: inline-block;
+  width: 10%;
   max-width: 10%;
   border: 1px solid black;
   border-radius: 5%;
@@ -43,6 +44,7 @@
 
 .field {
   border-top: 1px solid black;
+  max-height: 100px;
 }
 
 

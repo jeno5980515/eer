@@ -11,8 +11,9 @@ class Field extends React.Component{
 		this.onFieldRendered = onFieldRendered;
 	}
 	setFieldPoistion({ div, table, field }){
-		const x = div.offsetLeft,
-			y = div.offsetTop;
+		const computedDiv = div.getBoundingClientRect(),
+			x = computedDiv.left,
+			y = computedDiv.top;
 		this.onFieldRendered({ x, y, table, field })
 	}
 	render(){
